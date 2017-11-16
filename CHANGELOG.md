@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## [1.0.2] - 2017-11-16
 ### Add
 - Add NodeJS to Ruby Images
 
