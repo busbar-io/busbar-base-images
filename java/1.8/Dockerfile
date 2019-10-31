@@ -19,6 +19,15 @@ RUN cd /usr/lib && \
   sbt about && \
   rm -f /tmp/sbt.zip
 
+ENV MAVEN_VERSION 3.6.2
+ENV MAVEN_HOME /usr/lib/apache-maven-$MAVEN_VERSION
+ADD http://mirror.reverse.net/pub/apache/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.zip /tmp/maven.zip
+RUN cd /usr/lib && \
+  unzip /tmp/maven.zip && \
+  ln -s /usr/lib/apache-maven-$MAVEN_VERSION/bin/mvn /usr/bin/mvn && \
+  mvn -version && \
+  rm -f /tmp/maven.zip
+
 ADD build.sh /usr/local/bin/build.sh
 RUN chmod a+x /usr/local/bin/build.sh
 
