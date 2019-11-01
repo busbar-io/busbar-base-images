@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## [1.0.4] - 2019-10-31
+## [1.0.4] - 2019-11-01
 ### Add
-- Node version 10
+- Add Node Build Packs (v8, v10, v12)
 
 ## [1.0.3] - 2019-10-30
 ### Add
