@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.0.4] - 2019-10-31
+### Add
+- Node version 10
+
 ## [1.0.3] - 2019-10-30
 ### Add
 - Maven building to java image
