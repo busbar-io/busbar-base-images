@@ -1,4 +1,4 @@
-FROM node:12.13.0-slim
+FROM node:10.17.0-slim
 
 RUN apt-get update -y && \
       apt-get install -y \
@@ -9,4 +9,4 @@ RUN apt-get update -y && \
       rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app 
+WORKDIR /usr/src/app
