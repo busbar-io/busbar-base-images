@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.0.5] - 2019-11-06
+### Changed
+- Add Nginx Frontend Image v1.17.4
+
 ## [1.0.4] - 2019-11-01
 ### Add
 - Add Node Build Packs (v8, v11, v12)
