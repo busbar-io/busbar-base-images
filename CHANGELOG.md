@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## [1.0.4] - 2019-11-01
+## [1.0.4] - 2019-11-01 / 2020-01-01
 ### Add
 - Add Node Build Packs (v8, v11, v12)
+- Add settings.xml file to java image for support of additional Maven repositories
 
 ## [1.0.3] - 2019-10-30
 ### Add
