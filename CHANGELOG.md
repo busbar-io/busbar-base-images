@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.0.5] - 2020-01-01
+### Add
+- Add settings.xml file to java image for support of additional Maven repositories
+
 ## [1.0.3] - 2019-10-30
 ### Add
 - Maven building to java image
