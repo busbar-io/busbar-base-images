@@ -19,7 +19,7 @@ RUN cd /usr/lib && \
   sbt about && \
   rm -f /tmp/sbt.zip
 
-ENV MAVEN_VERSION 3.6.2
+ENV MAVEN_VERSION 3.6.3
 ENV MAVEN_HOME /usr/lib/apache-maven-$MAVEN_VERSION
 ADD http://mirror.reverse.net/pub/apache/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.zip /tmp/maven.zip
 RUN cd /usr/lib && \
@@ -27,6 +27,9 @@ RUN cd /usr/lib && \
   ln -s /usr/lib/apache-maven-$MAVEN_VERSION/bin/mvn /usr/bin/mvn && \
   mvn -version && \
   rm -f /tmp/maven.zip
+ONBUILD ARG BASE64_MAVEN_SETTINGS
+ONBUILD RUN mkdir /root/.m2
+ONBUILD RUN echo $BASE64_MAVEN_SETTINGS | base64 --decode > /root/.m2/settings.xml
 
 ADD build.sh /usr/local/bin/build.sh
 RUN chmod a+x /usr/local/bin/build.sh
